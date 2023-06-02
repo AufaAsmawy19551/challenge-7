@@ -9,6 +9,7 @@ const swaggerDocument = YAML.parse(documentation);
 router.use('/api-documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 const middlewares = require('../utils/middlewares');
+const storage = require('../utils/strorage');
 
 const user = require('../controllers/user');
 const supplier = require('../controllers/supplier');
@@ -16,13 +17,15 @@ const component = require('../controllers/component');
 const product = require('../controllers/product');
 const componentSupplier = require('../controllers/componentSupplier');
 const productComponent = require('../controllers/productComponent');
+const media = require('../controllers/media');
+
 
 router.get('/', (req, res) => res.status(200).json({ message: 'Welcome to Factory RESTfull API' }));
 
-router.post('/auth/register', user.register);
-router.post('/auth/login', user.login);
-router.get('/auth/oauth', user.googleOauth2);
-router.get('/auth/whoami', middlewares.auth, user.whoami);
+router.post('/auth/register', user.register); // register user
+router.post('/auth/login', user.login); // login user
+router.get('/auth/oauth', user.googleOauth2); // login user using OAuth2
+router.get('/auth/whoami', middlewares.auth, user.whoami);// get user
 
 router.use(middlewares.auth);
 
@@ -49,5 +52,8 @@ router.delete('/ComponentSuppliers', componentSupplier.destroy); // remove relat
 
 router.post('/productComponents', productComponent.store); // add relation product and component
 router.delete('/productComponents', productComponent.destroy); // remove relation product and component
+
+router.post('/storage/images', storage.image.single('media'), media.strogeSingle); // upload single image file
+router.post('/storage/multi/images', storage.image.array('media'), media.storageArray); // upload multiple image file
 
 module.exports = router;
