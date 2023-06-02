@@ -18,9 +18,10 @@ const product = require('../controllers/product');
 const componentSupplier = require('../controllers/componentSupplier');
 const productComponent = require('../controllers/productComponent');
 const media = require('../controllers/media');
+const mailer = require('../controllers/mailer');
 
 
-router.get('/', (req, res) => res.status(200).json({ message: 'Welcome to Factory RESTfull API' }));
+router.get('/', (req, res) => {return res.status(200).json({ message: 'Welcome to Factory RESTfull API' })});
 
 router.post('/auth/register', user.register); // register user
 router.post('/auth/login', user.login); // login user
@@ -55,5 +56,7 @@ router.delete('/productComponents', productComponent.destroy); // remove relatio
 
 router.post('/storage/images', storage.image.single('media'), media.strogeSingle); // upload single image file
 router.post('/storage/multi/images', storage.image.array('media'), media.storageArray); // upload multiple image file
+
+router.post('/send-email', mailer.sendEmail); // send email with specific reciver, subject, body
 
 module.exports = router;
