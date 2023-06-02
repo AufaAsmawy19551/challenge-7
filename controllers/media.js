@@ -1,5 +1,3 @@
-const imagekit = require('../utils/imagekit');
-
 module.exports = {
     strogeSingle: (req, res) => {
         const imageUrl = `${req.protocol}://${req.get('host')}/images/${req.file.filename}`;
@@ -27,27 +25,4 @@ module.exports = {
             }
         });
     },
-
-    imagekitUpload: async (req, res) => {
-        try {
-            const stringFile = req.file.buffer.toString('base64');
-
-            const uploadFile = await imagekit.upload({
-                fileName: req.file.originalname,
-                file: stringFile
-            });
-
-            return res.json({
-                status: true,
-                message: 'success',
-                data: {
-                    name: uploadFile.name,
-                    url: uploadFile.url,
-                    type: uploadFile.fileType
-                }
-            });
-        } catch (err) {
-            throw err;
-        }
-    }
 };
