@@ -1,19 +1,30 @@
 const express = require('express');
 const router = express.Router();
+
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yaml');
 const fs = require('fs');
 const documentation = fs.readFileSync('./documentation.yml', 'utf8');
 const swaggerDocument = YAML.parse(documentation);
-
 router.use('/api-documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-router.get('/', (req, res) => res.status(200).json({ message: 'Welcome to Factory RESTfull API' }));
 
+const middlewares = require('../utils/middlewares');
+
+const user = require('../controllers/user');
 const supplier = require('../controllers/supplier');
 const component = require('../controllers/component');
 const product = require('../controllers/product');
 const componentSupplier = require('../controllers/componentSupplier');
 const productComponent = require('../controllers/productComponent');
+
+router.get('/', (req, res) => res.status(200).json({ message: 'Welcome to Factory RESTfull API' }));
+
+router.post('/auth/register', user.register);
+router.post('/auth/login', user.login);
+router.get('/auth/oauth', user.googleOauth2);
+router.get('/auth/whoami', middlewares.auth, user.whoami);
+
+router.use(middlewares.auth);
 
 router.get('/suppliers', supplier.index); // get all supplier
 router.post('/suppliers', supplier.store); // create new supplier
