@@ -32,7 +32,7 @@ module.exports = {
 
 	getHtml: (filename, data) => {
 		return new Promise((resolve, reject) => {
-			const path = `${__dirname}/../views/emailTemplate/${filename}`;
+			const path = `${__dirname}/../views/email-template/${filename}`;
 
 			ejs.renderFile(path, data, (err, data) => {
 				if (err) {
