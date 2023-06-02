@@ -1,0 +1,849 @@
+{
+	"info": {
+		"_postman_id": "8c3c9595-6c75-44a0-843f-e979f4f55725",
+		"name": "Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19923623"
+	},
+	"item": [
+		{
+			"name": "Chapter 5",
+			"item": [
+				{
+					"name": "Suppliers",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/suppliers",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"suppliers"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Store",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"company 1\",\r\n  \"address\": \"Jakarta Timur\"\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/suppliers",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"suppliers"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Show",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/suppliers/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"suppliers",
+										"1"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"company 1\",\r\n  \"address\": \"Jakarta Timur\"\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/suppliers/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"suppliers",
+										"1"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/suppliers/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"suppliers",
+										"1"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Components",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/components",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"components"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Store",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"component 1\",\r\n  \"description\": \"component 1 description\"\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/components",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"components"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Show",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/components/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"components",
+										"1"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"component 1\",\r\n  \"description\": \"component 1 description\"\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/components/2",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"components",
+										"2"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/components/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"components",
+										"1"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/products",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Store",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"product 1\",\r\n  \"quantity\": 10\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/products",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Show",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/products/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"1"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"product 1\",\r\n  \"quantity\": 20\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/products/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"1"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/products/1",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"products",
+										"1"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ComponentSuppliers",
+					"item": [
+						{
+							"name": "Store",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"component_id\": 1,\r\n    \"supplier_id\": 1\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/ComponentSuppliers",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"ComponentSuppliers"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"component_id\": 1,\r\n    \"supplier_id\": 1\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/ComponentSuppliers",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"ComponentSuppliers"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ProductComponents",
+					"item": [
+						{
+							"name": "Store",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": 1,\r\n    \"component_id\": 1\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/productComponents",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"productComponents"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": 1,\r\n    \"component_id\": 1\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/productComponents",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"productComponents"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
